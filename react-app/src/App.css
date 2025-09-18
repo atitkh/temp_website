@@ -1,0 +1,94 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.dot {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: dotFade 2s ease-in-out infinite;
+}
+
+.dot-1 {
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  animation-delay: 0.2s;
+}
+
+.dot-3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotFade {
+  0%, 20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 1;
+  }
+  60%, 100% {
+    opacity: 0.2;
+  }
+}
