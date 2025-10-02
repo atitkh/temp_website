@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/* Hide reCAPTCHA v3 badge */
+.grecaptcha-badge {
+  display: none !important;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -90,5 +95,311 @@ body {
   }
   60%, 100% {
     opacity: 0.2;
+  }
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+/* Contact Button */
+.contact-button {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  min-width: 160px;
+}
+
+.contact-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.contact-button:active {
+  transform: translateY(0);
+}
+
+/* Pitch Deck Button - Different styling */
+.pitch-deck-button {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  border: 2px solid #4CAF50;
+  color: #ffffff;
+}
+
+.pitch-deck-button:hover {
+  background: linear-gradient(45deg, #45a049, #4CAF50);
+  border-color: #45a049;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Select dropdown styling */
+.form-select {
+  cursor: pointer;
+}
+
+.form-select option {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+  margin: 8px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+.checkbox-label span {
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+}
+
+.checkbox-label input[type="checkbox"].error {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.recaptcha-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+.submit-button {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: linear-gradient(45deg, #45a049, #4CAF50);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.success-message h2 {
+  color: #4CAF50;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.success-message p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 24px;
+    margin: 10px;
+  }
+  
+  .contact-form h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
   }
 }
