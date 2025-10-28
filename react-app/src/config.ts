@@ -3,7 +3,7 @@
 export const CONFIG = {
   // Set to 'black' for solid black background, or provide an image URL for background image
   backgroundType: 'black' as 'black' | 'image',
-  backgroundImage: '/your-background-image.jpg',
+  backgroundImage: '/logo_square.png',
   logoSrc: '/logo_square.png',
   companyName: 'BIOCOM',
 };

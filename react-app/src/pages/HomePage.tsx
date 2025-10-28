@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { CONFIG } from '../config';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import Modal from '../components/Modal';
 import ContactUsForm from '../components/forms/ContactUsForm';
 import PitchDeckForm from '../components/forms/PitchDeckForm';
@@ -32,17 +34,19 @@ export function HomePage() {
   };
 
   return (
-    <div className="App" style={backgroundStyle}>
+    <>
+      <Navbar />
+      <div className="App" style={backgroundStyle}>
       <div className="container">
         <div className="logo-container">
           <img src={CONFIG.logoSrc} alt={`${CONFIG.companyName} Logo`} className="logo" />
-        </div>
+          </div>
         <div className="text-container">
           <span className="text">More information coming soon</span>
           <span className="dot dot-1">.</span>
           <span className="dot dot-2">.</span>
           <span className="dot dot-3">.</span>
-        </div>
+          </div>
 
         <div className="button-container">
           <button className="contact-button" onClick={() => setActiveForm('contact')}>
@@ -54,8 +58,8 @@ export function HomePage() {
           >
             Request Pitch Deck
           </button>
+          </div>
         </div>
-      </div>
 
       <Modal isOpen={!!activeForm} onClose={closeModal}>
         {submitSuccess ? (
@@ -65,7 +69,7 @@ export function HomePage() {
               Your {activeForm === 'contact' ? 'message' : 'pitch deck request'} has been sent
               successfully. We'll get back to you soon.
             </p>
-          </div>
+            </div>
         ) : (
           <>
             {activeForm === 'contact' && (
@@ -77,8 +81,13 @@ export function HomePage() {
           </>
         )}
       </Modal>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }
 
 export default HomePage;
+
+
+

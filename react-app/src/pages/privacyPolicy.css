@@ -1,9 +1,23 @@
+:root {
+    --pp-maxw: 1200px;
+    --pp-text: #f5f7fb;
+    /* body text on dark */
+    --pp-muted: #c8cfdb;
+    /* meta text */
+    --pp-heading: #ffffff;
+    /* headings */
+    --pp-link: #9ecbff;
+    /* links on dark */
+    --pp-link-hover: #cfe4ff;
+    --pp-border: rgba(255, 255, 255, 0.12);
+    --pp-shadow: rgba(0, 0, 0, 0.35);
+}
+
 .policy {
     width: 100%;
     max-width: var(--pp-maxw);
     color: var(--pp-text);
     background: rgba(0, 0, 0, 0.45);
-    /* soft overlay for readability on images */
     backdrop-filter: blur(6px);
     border: 1px solid var(--pp-border);
     box-shadow: 0 10px 30px var(--pp-shadow);
@@ -18,15 +32,16 @@
     max-width: var(--pp-maxw);
     margin: 0 auto clamp(16px, 2.5vw, 24px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     gap: 20px;
     color: var(--pp-heading);
 }
 
-.logo {
-    width: 50px;
+.logo-pp {
+    width: 35px;
     height: 50px;
+    padding-bottom: 3px;
     object-fit: contain;
 }
 
@@ -104,7 +119,7 @@
         gap: 10px;
     }
 
-    .logo {
+    .logo-pp {
         width: 44px;
         height: 44px;
     }
