@@ -373,6 +373,73 @@ body {
   opacity: 0.9;
 }
 
+/* Page Components Styling */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.page-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.page-content h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.page-content p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Pages */
+@media (max-width: 768px) {
+  .page-content {
+    padding: 2rem;
+  }
+  
+  .page-content h1 {
+    font-size: 2rem;
+  }
+  
+  .page-content p {
+    font-size: 1rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .modal-content {
