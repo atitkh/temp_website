@@ -14,16 +14,17 @@ export function InfoPage() {
 
   return (
     <div className="App" style={backgroundStyle}>
-      <div className="page-container">
-        <div className="logo-container">
-          <img src={CONFIG.logoSrc} alt={`${CONFIG.companyName} Logo`} className="logo" />
+          <div className="container">
+            <div className="logo-container">
+              <img src={CONFIG.logoSrc} alt={`${CONFIG.companyName} Logo`} className="logo" />
+            </div>
+            <div className="text-container">
+              <span className="text">More information coming soon</span>
+              <span className="dot dot-1">.</span>
+              <span className="dot dot-2">.</span>
+              <span className="dot dot-3">.</span>
+            </div>
         </div>
-        <div className="page-content">
-          <h1>Information</h1>
-          <p>More information about BIOCOM coming soon.</p>
-          <a href="/" className="back-link">← Back to Home</a>
-        </div>
-      </div>
     </div>
   );
 }

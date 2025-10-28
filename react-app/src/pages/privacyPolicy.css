@@ -1,0 +1,115 @@
+.policy {
+    width: 100%;
+    max-width: var(--pp-maxw);
+    color: var(--pp-text);
+    background: rgba(0, 0, 0, 0.45);
+    /* soft overlay for readability on images */
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--pp-border);
+    box-shadow: 0 10px 30px var(--pp-shadow);
+    border-radius: 16px;
+    padding: clamp(20px, 3vw, 36px);
+    color: white;
+}
+
+/* Logo + Title row */
+.logo-row {
+    width: 100%;
+    max-width: var(--pp-maxw);
+    margin: 0 auto clamp(16px, 2.5vw, 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: var(--pp-heading);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.title {
+    font-size: clamp(26px, 3.2vw, 36px);
+    line-height: 1.15;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--pp-heading);
+}
+
+/* Typography & rhythm */
+.policy p {
+    margin: 0 0 1rem 0;
+    line-height: 1.7;
+    font-size: clamp(15px, 1.2vw, 17px);
+}
+
+.policy header.meta p {
+    color: var(--pp-muted);
+    margin-bottom: 0.6rem;
+}
+
+.policy a {
+    color: var(--pp-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.policy a:hover {
+    color: var(--pp-link-hover);
+}
+
+.policy h2 {
+    color: var(--pp-heading);
+    margin: 2rem 0 0.75rem;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.25;
+    border-bottom: 1px solid var(--pp-border);
+    padding-bottom: 0.4rem;
+}
+
+.policy h3 {
+    color: var(--pp-heading);
+    margin: 1.25rem 0 0.5rem;
+    font-size: clamp(17px, 1.8vw, 20px);
+}
+
+.policy ul {
+    margin: 0.5rem 0 1rem 1.2rem;
+    padding-left: 1rem;
+}
+
+.policy li {
+    margin: 0.35rem 0;
+}
+
+/* Address block */
+.policy address {
+    font-style: normal;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--pp-border);
+    padding: 12px 14px;
+    border-radius: 12px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+    .logo-row {
+        gap: 10px;
+    }
+
+    .logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .policy {
+        padding: 18px;
+    }
+}
