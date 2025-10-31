@@ -493,6 +493,11 @@ body {
   align-items: center;
 }
 
+.navbar-brand-image {
+  height: 45px;
+  width: auto;
+}
+
 .navbar-brand {
   color: #ffffff;
   font-size: 1.5rem;

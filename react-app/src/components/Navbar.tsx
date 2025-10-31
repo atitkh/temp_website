@@ -10,7 +10,7 @@ export function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-brand">
-          BIOCOM
+          <img src={'/bc_long.png'} alt="BIOCOM" className="navbar-brand-image" />
         </Link>
         <ul className="navbar-menu">
           <li>
