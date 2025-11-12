@@ -6,6 +6,7 @@ import { RECAPTCHA_SITE_KEY } from './config';
 import HomePage from './pages/HomePage';
 import InfoPage from './pages/InfoPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import ProductSurveyPage from './pages/ProductSurveyPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/info" element={<InfoPage />} />
+          <Route path="/survey" element={<ProductSurveyPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         </Routes>
       </Router>

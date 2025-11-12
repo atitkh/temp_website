@@ -11,6 +11,7 @@ export const CONFIG = {
 export const API_ENDPOINTS = {
   contactUs: 'https://biocom.technology/api/contact-us.php',
   pitchDeck: 'https://biocom.technology/api/pitch-deck.php',
+  productSurvey: 'https://biocom.technology/api/product-survey.php',
 };
 
 // reCAPTCHA v3 Site Key (client-side). Fallbacks to Google's test key in dev if env var missing.

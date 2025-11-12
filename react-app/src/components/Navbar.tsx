@@ -29,6 +29,14 @@ export function Navbar() {
               Info
             </Link>
           </li>
+          <li>
+            <Link 
+              to="/survey" 
+              className={`navbar-link ${isActive('/survey') ? 'active' : ''}`}
+            >
+              Product Survey
+            </Link>
+          </li>
           {/* <li>
             <Link 
               to="/privacy-policy" 

@@ -17,3 +17,16 @@ export interface PitchDeckFormData {
   roleTitle: string;
   useTermsAck: boolean;
 }
+
+export interface ProductSurveyFormData {
+  email: string;
+  xrExpectations: string;
+  xrExpectationsOther: string;
+  aimlIssues: string[];
+  aimlIssuesOther: string;
+  bciPotential: string;
+  bciPotentialOther: string;
+  xrComplaints: string;
+  furtherInterest: string;
+  furtherInterestOther: string;
+}

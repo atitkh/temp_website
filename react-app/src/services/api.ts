@@ -1,5 +1,5 @@
 import { API_ENDPOINTS } from '../config';
-import { ContactFormData, PitchDeckFormData } from '../types/forms';
+import { ContactFormData, PitchDeckFormData, ProductSurveyFormData } from '../types/forms';
 
 async function postJson<T>(url: string, body: unknown): Promise<T> {
   const res = await fetch(url, {
@@ -33,5 +33,16 @@ export function submitPitchDeck(
     ...data,
     recaptchaToken,
     recaptchaAction: 'pitch_deck_request',
+  });
+}
+
+export function submitProductSurvey(
+  data: ProductSurveyFormData,
+  recaptchaToken: string
+): Promise<unknown> {
+  return postJson(API_ENDPOINTS.productSurvey, {
+    ...data,
+    recaptchaToken,
+    recaptchaAction: 'product_survey',
   });
 }

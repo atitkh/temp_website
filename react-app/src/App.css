@@ -163,6 +163,20 @@ body {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
+/* Survey Button - Green theme */
+.survey-button {
+  background: #4CAF50;
+  border: 2px solid #4CAF50;
+  color: #ffffff;
+}
+
+.survey-button:hover {
+  background: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
 /* Modal Styles */
 .modal-overlay {
   position: fixed;
@@ -276,7 +290,10 @@ body {
 
 /* Checkbox styling */
 .checkbox-group {
-  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .checkbox-label {
@@ -363,6 +380,59 @@ body {
   transform: translateY(0);
 }
 
+/* Survey Form Specific Styles */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.radio-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0.25rem 0;
+}
+
+.radio-label input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  cursor: pointer;
+  accent-color: #ffffff;
+  margin-top: 2px;
+}
+
+.radio-label span {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.other-input {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.other-input:focus {
+  outline: none;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.other-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* Success Message */
 .success-message {
   text-align: center;
@@ -397,7 +467,7 @@ body {
   padding: 3rem;
   border-radius: 10px;
   border: 2px solid #ffffff;
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   margin-top: 2rem;
   text-align: center;
@@ -434,6 +504,44 @@ body {
   transform: translateY(-2px);
 }
 
+/* Survey Page Styling */
+.survey-page {
+  border: none !important;
+  background: transparent !important;
+  max-width: 1200px;
+  text-align: left;
+}
+
+.survey-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.survey-form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.survey-page .success-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.survey-page .success-message h1 {
+  color: #4CAF50;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.survey-page .success-message p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
 /* Responsive Design for Pages */
 @media (max-width: 768px) {
   .page-content {
@@ -446,6 +554,19 @@ body {
   
   .page-content p {
     font-size: 1rem;
+  }
+
+  .survey-page-content {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .survey-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .survey-page-container .contact-form h2 {
+    font-size: 1.5rem;
   }
 }
 
