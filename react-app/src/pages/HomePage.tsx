@@ -56,7 +56,7 @@ export function HomePage() {
             className="contact-button pitch-deck-button"
             onClick={() => setActiveForm('pitchDeck')}
           >
-            Request Pitch Deck
+            Request More Info
           </button>
           </div>
         </div>
@@ -66,7 +66,7 @@ export function HomePage() {
           <div className="success-message">
             <h2>Thank you!</h2>
             <p>
-              Your {activeForm === 'contact' ? 'message' : 'pitch deck request'} has been sent
+              Your {activeForm === 'contact' ? 'message' : 'info request'} has been sent
               successfully. We'll get back to you soon.
             </p>
             </div>

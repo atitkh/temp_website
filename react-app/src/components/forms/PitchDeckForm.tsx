@@ -107,7 +107,7 @@ export function PitchDeckForm({ onClose, onSuccess }: PitchDeckFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="contact-form">
-      <h2>Request Pitch Deck</h2>
+      <h2>Request More Info</h2>
 
       <div className="form-group">
         <label htmlFor="fullName">Full Name *</label>
@@ -207,7 +207,7 @@ export function PitchDeckForm({ onClose, onSuccess }: PitchDeckFormProps) {
       </div>
 
       <button type="submit" className="submit-button" disabled={isSubmitting}>
-        {isSubmitting ? 'Sending...' : 'Request Pitch Deck'}
+        {isSubmitting ? 'Sending...' : 'Request More Info'}
       </button>
     </form>
   );

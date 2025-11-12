@@ -21,11 +21,6 @@ export function PrivacyPolicyPage() {
             <div className="App" style={backgroundStyle}>
                 <div className="policy">
                     <div className="logo-row">
-                        <img
-                            src={CONFIG.logoSrc}
-                            alt={`${CONFIG.companyName} Logo`}
-                            className={`logo-pp`}
-                        />
                         <h1 className="title">Privacy Policy</h1>
                     </div>
 

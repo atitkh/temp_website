@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Hide reCAPTCHA v3 badge */
 .grecaptcha-badge {
   display: none !important;
@@ -21,7 +30,7 @@ body {
 
 .App {
   background-color: #000000;
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
