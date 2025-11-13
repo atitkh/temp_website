@@ -542,6 +542,14 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Contact section for info page */
+.contact-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /* Responsive Design for Pages */
 @media (max-width: 768px) {
   .page-content {
@@ -554,6 +562,19 @@ body {
   
   .page-content p {
     font-size: 1rem;
+  }
+
+  .info-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-page h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-page p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .survey-page-content {
