@@ -15,7 +15,7 @@ export function Footer() {
 
             <div className="footer-bottom">
                 <div className="footer-container">
-                    <p>&copy; {new Date().getFullYear()} BIOCOM. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} BIOCOM Technologies LLC. All rights reserved.</p>
                 </div>
 
                 <div className="footer-container">

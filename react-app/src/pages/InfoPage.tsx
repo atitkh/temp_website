@@ -3,7 +3,7 @@ import { CONFIG } from '../config';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Modal from '../components/Modal';
-import ContactUsForm from '../components/forms/ContactUsForm';
+import PitchDeckForm from '../components/forms/PitchDeckForm';
 
 export function InfoPage() {
     const [showContactForm, setShowContactForm] = useState(false);
@@ -83,10 +83,10 @@ export function InfoPage() {
 
                             <div className="contact-section">
                                 <button 
-                                    className="contact-button" 
+                                    className="contact-button pitch-deck-button" 
                                     onClick={() => setShowContactForm(true)}
                                 >
-                                    Contact Us
+                                    Request More Info
                                 </button>
                             </div>
                         </section>
@@ -98,10 +98,10 @@ export function InfoPage() {
                 {submitSuccess ? (
                     <div className="success-message">
                         <h2>Thank you!</h2>
-                        <p>Your message has been sent successfully. We'll get back to you soon.</p>
+                        <p>Your info request has been sent successfully. We'll get back to you soon.</p>
                     </div>
                 ) : (
-                    <ContactUsForm onClose={closeModal} onSuccess={handleFormSuccess} />
+                    <PitchDeckForm onClose={closeModal} onSuccess={handleFormSuccess} />
                 )}
             </Modal>
 
